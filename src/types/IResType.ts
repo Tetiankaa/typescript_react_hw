@@ -1,3 +1,3 @@
-import {AxiosPromise} from "axios";
+import {AxiosResponse} from "axios";
 
-export type IRes<T> = Promise<AxiosPromise<T>>;
+export type IRes<T> = Promise<AxiosResponse<T>>;
