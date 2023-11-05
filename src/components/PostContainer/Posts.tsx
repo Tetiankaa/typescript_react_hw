@@ -1,16 +1,13 @@
-import React, {useEffect, useState} from 'react';
-import {useParams} from "react-router-dom";
+import React, {FC} from 'react';
 import {IPost} from "../../interfaces/postInterface";
-import {postService} from "../../services/postService";
 import {Post} from "./Post";
 
-const Posts = () => {
-    const {userId} = useParams();
-    const [posts, setPosts] = useState<IPost[]>([]);
+interface IProps{
+    posts:IPost[]
+}
+const Posts:FC<IProps> = ({posts}) => {
 
-    useEffect(() => {
-        postService.getAll(userId).then(({data})=>setPosts(data))
-    }, [userId]);
+
     return (
         <div>
             {posts.map(post=><Post key={post.id} post={post}/>)}

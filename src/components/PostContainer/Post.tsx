@@ -12,7 +12,7 @@ const Post:FC<IProps> = ({post}) => {
     return (
         <div>
             <div>{title}</div>
-            <button onClick={()=>navigate(`${id}`, {state:{post}})}>details</button>
+            <button onClick={()=>navigate(`/posts/${id}`, {state:{post}})}>details</button>
         </div>
     );
 };

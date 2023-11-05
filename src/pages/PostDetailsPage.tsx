@@ -11,7 +11,8 @@ const PostDetailsPage = () => {
 
     useEffect(() => {
         if (state.post){
-            setPost(state.post)
+            setPost(state.post);
+
         }else {
             postService.getById(postId).then(({data})=>setPost(data))
         }
