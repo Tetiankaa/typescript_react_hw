@@ -1,0 +1,10 @@
+.Header{
+    background-color: aqua;
+    color: grey;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    width: 100vw;
+}
